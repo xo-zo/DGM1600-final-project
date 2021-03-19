@@ -2,7 +2,7 @@ import { planets } from './planets.js'
 
 var allPlanets = planets
 
-/************** This will print all planet names onto the page -- probably delete later
+/************* This will print all planet names onto the page -- probably delete later
 for (var i = 0; i < allPlanets.length; i++) {
     // create a new element of type div as a variable
     var div = document.createElement('div');
