@@ -26,14 +26,17 @@ if (searchButton.addEventListener)
 else if (searchButton.attachEvent)
     searchButton.attachEvent('onclick', searchByClimate);
 
-// logic to search by the selected climate
+// search by the selected climate
 function searchByClimate() {
-    // get text from the picklist element
+    // clear current results on the page so you don't have to refresh between searches
+    clearResults();
+
+    // get text of the currently selected option from the climate picklist
     var selectedClimate = document.getElementById('climate-picklist');
     selectedClimate = selectedClimate.options[selectedClimate.selectedIndex].value;
 
     // Sort through all possible climates and try to find a match,
-    //    if a match is found, print it.
+    //    if a match is found, print it and loop until complete.
     allPlanets.forEach(planet => {
         var climateArray = planet.climate.split(", ");
         climateArray.forEach(climate => {
@@ -47,5 +50,16 @@ function searchByClimate() {
     });
 }
 
+// clear out all planets that are currently on the page
+function clearResults() {
+    // find all planet elements on the page, set them as 'element' in an array, 'elements'
+    var elements = document.getElementsByClassName('planet'), element;
+    // loop through elements and delete each planet element
+    while (element = elements[0]) {
+        element.parentNode.removeChild(element);
+    }
+}
+
 // TODO: 
 // prior to running any code through the submit button, figure out a way to clear out all existing planet divs
+// add all climates -- there are a bunch that we missed
