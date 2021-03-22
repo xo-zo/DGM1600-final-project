@@ -9,8 +9,11 @@
 </head>
 
 <body>
-    <div id="demo">
-        <h2>Select your dream climate</h2>
+    <div id="page-title">
+        <h1>Fill in the parameters of your dream destination</h1>
+    </div>
+    <div id="search-climate">
+        <h2>Climate:</h2>
         <select id="climate-picklist">
             <option value="artic">Arctic</option><!-- Data spelling error -->
             <option value="arid">Arid</option>
@@ -30,7 +33,17 @@
             <option value="unknown">Unknown</option>
             <option value="windy">Windy</option>
         </select>
-        <button id="search-button" type="button">Find a Match</button>
+        <button id="search-button-climate" type="button">Find a Match</button>
+    </div>
+    <div id="search-daylength">
+        <h2>Length of Day (in Earth Hours):</h2>
+        <select id="daylength-picklist">
+            <option value="short">Short (<20 Earth Hours)</option>
+            <option value="average">Average (20-28 Earth Hours)</option>
+            <option value="long">Long (>28 Earth Hours)</option>
+            <option value="unknown">Unknown</option>
+        </select>
+        <button id="search-button-daylength" type="button">Find a Match</button>
     </div>
     <script src="./index.js" type="module"></script>
 </body>

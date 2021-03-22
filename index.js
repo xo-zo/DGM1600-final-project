@@ -19,12 +19,14 @@ for (var i = 0; i < allPlanets.length; i++) {
     // iterate and go to the next planet
 }*/
 
+
+// --------------------------------- searchByClimate() ---------------------------------//
 // This block executes searchByClimate() from the search button
-var searchButton = document.getElementById("search-button");
-if (searchButton.addEventListener)
-    searchButton.addEventListener("click", searchByClimate, false);
-else if (searchButton.attachEvent)
-    searchButton.attachEvent('onclick', searchByClimate);
+var searchButtonClimate = document.getElementById("search-button-climate");
+if (searchButtonClimate.addEventListener)
+    searchButtonClimate.addEventListener("click", searchByClimate, false);
+else if (searchButtonClimate.attachEvent)
+    searchButtonClimate.attachEvent('onclick', searchByClimate);
 
 // search by the selected climate
 function searchByClimate() {
@@ -50,6 +52,60 @@ function searchByClimate() {
     });
 }
 
+// --------------------------------- searchByDaylength() ---------------------------------//
+// This block executes searchByDayLength() from the search button
+var searchButtonDaylength = document.getElementById("search-button-daylength");
+if (searchButtonDaylength.addEventListener)
+    searchButtonDaylength.addEventListener("click", searchByDaylength, false);
+else if (searchButtonDaylength.attachEvent)
+    searchButtonDaylength.attachEvent('onclick', searchByDaylength);
+
+// search by the selected climate
+function searchByDaylength() {
+    // clear current results on the page so you don't have to refresh between searches
+    clearResults();
+
+    // get text of the currently selected option from the daylength picklist
+    var selectedDaylength = document.getElementById('daylength-picklist');
+    selectedDaylength = selectedDaylength.options[selectedDaylength.selectedIndex].value;
+
+    // additional testing logic
+    var short = "short"
+    var average = "average"
+    var long = "long"
+    var unknown = "unknown"
+
+    // Sort through all lengths and try to find a match (logic included in block),
+    //    if a match is found, print it and loop until complete.
+    allPlanets.forEach(planet => {
+        // for every planet, create the div variable with a class of 'planet'
+        var div = document.createElement('div');
+        div.className = 'planet';
+        if (selectedDaylength < 20) {
+            // print out short daylength planet
+            div.innerHTML = '<p>' + planet.name + '</p>';
+            document.body.appendChild(div);
+        } else if (selectedDaylength >= 20 && selectedDaylength <= 28) {
+            // print out as average daylength planet
+            div.innerHTML = '<p>' + planet.name + '</p>';
+            document.body.appendChild(div);            
+        } else if (selectedDaylength > 28) {
+            // print out as long daylength planet
+            div.innerHTML = '<p>' + planet.name + '</p>';
+            document.body.appendChild(div);
+        } else {
+            // print out as unknown planet
+            div.innerHTML = '<p>' + planet.name + '</p>';
+            document.body.appendChild(div);
+        }
+    });
+}
+
+
+
+
+// -------------------------------- Universal Functions --------------------------------//
+
 // clear out all planets that are currently on the page
 function clearResults() {
     // find all planet elements on the page, set them as 'element' in an array, 'elements'
@@ -59,7 +115,9 @@ function clearResults() {
         element.parentNode.removeChild(element);
     }
 }
-
 // TODO: 
-// prior to running any code through the submit button, figure out a way to clear out all existing planet divs
-// add all climates -- there are a bunch that we missed
+// X // Add options and search button to html page
+//   // Create a standard function for displaying planets based on standard earth day length
+// X // Call the clearResults() function when running this one
+//   // create a function to calculate earth day time
+//   // Improve the quality of search results -- include climate and standard earth day
