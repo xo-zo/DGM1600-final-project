@@ -69,32 +69,25 @@ function searchByDaylength() {
     var selectedDaylength = document.getElementById('daylength-picklist');
     selectedDaylength = selectedDaylength.options[selectedDaylength.selectedIndex].value;
 
-    // additional testing logic
-    var short = "short"
-    var average = "average"
-    var long = "long"
-    var unknown = "unknown"
-
     // Sort through all lengths and try to find a match (logic included in block),
     //    if a match is found, print it and loop until complete.
     allPlanets.forEach(planet => {
-        // for every planet, create the div variable with a class of 'planet'
-        var div = document.createElement('div');
-        div.className = 'planet';
-        if (selectedDaylength < 20) {
-            // print out short daylength planet
-            div.innerHTML = '<p>' + planet.name + '</p>';
-            document.body.appendChild(div);
-        } else if (selectedDaylength >= 20 && selectedDaylength <= 28) {
-            // print out as average daylength planet
-            div.innerHTML = '<p>' + planet.name + '</p>';
-            document.body.appendChild(div);            
-        } else if (selectedDaylength > 28) {
-            // print out as long daylength planet
-            div.innerHTML = '<p>' + planet.name + '</p>';
-            document.body.appendChild(div);
+        // for the currently selected planet, create and set a variable for daylength
+        var currentPlanetDaylength = "";
+        if (planet.rotation_period <20) {
+            currentPlanetDaylength = "short";
+        } else if (planet.rotation_period >= 20 && planet.rotation_period <= 28) {
+            currentPlanetDaylength = "average";
+        } else if (planet.rotation_period > 28) {
+            currentPlanetDaylength = "long";
         } else {
-            // print out as unknown planet
+            currentPlanetDaylength = "unknown";
+        }
+
+        // if the currently selected planet daylength matches the picklist value, print it
+        if (currentPlanetDaylength == selectedDaylength) {
+            var div = document.createElement('div');
+            div.className = 'planet';
             div.innerHTML = '<p>' + planet.name + '</p>';
             document.body.appendChild(div);
         }
@@ -117,7 +110,6 @@ function clearResults() {
 }
 // TODO: 
 // X // Add options and search button to html page
-//   // Create a standard function for displaying planets based on standard earth day length
+// X // Create a standard function for displaying planets based on standard earth day length
 // X // Call the clearResults() function when running this one
-//   // create a function to calculate earth day time
 //   // Improve the quality of search results -- include climate and standard earth day
