@@ -7,9 +7,10 @@ Final Project for my DGM 1600 course
 # some commits in here, forgot to log this
 # 3/25 - See TODO below.
 
-# # Now, you should remove the unit testing javascript file (if you haven't so so already)
-# # Use one or more of the attached JavaScript files (people.js, starships.js, etc.) to import and manipulate JavaScript objects and arrays of objects gathered from the Star Wars API
-# # Use your JavaScript skills to extract at least 2 different arrays of data (starships, characters, etc.) from the API and display them on your page in some creative manner.
-# # Using querySelector() or querySelectorAll(), display your array data in a specific portion of your portfolio project page.
-# # Push your updated code to your GitHub site and submit your commit URL.
-# # Hook up Netlify to your GitHub repo and submit your Netlify deployed site URL.
+# X # Now, you should remove the unit testing javascript file (if you haven't so so already)
+# X # Update directory structure for better clustering of pages / referencing
+#   # Use one or more of the attached JavaScript files (people.js, starships.js, etc.) to import and manipulate JavaScript objects and arrays of objects gathered from the Star Wars API
+#   # Use your JavaScript skills to extract at least 2 different arrays of data (starships, characters, etc.) from the API and display them on your page in some creative manner.
+#   # Using querySelector() or querySelectorAll(), display your array data in a specific portion of your portfolio project page.
+#   # Push your updated code to your GitHub site and submit your commit URL.
+#   # Hook up Netlify to your GitHub repo and submit your Netlify deployed site URL.

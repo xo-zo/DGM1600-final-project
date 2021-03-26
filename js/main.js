@@ -1,4 +1,4 @@
-import { planets } from './planets.js'
+import { planets } from './swapi_files/planets.js'
 
 var allPlanets = planets
 
