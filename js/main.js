@@ -1,23 +1,30 @@
 import { planets } from './swapi_files/planets.js'
+import { species } from './swapi_files/species.js'
 
 var allPlanets = planets
+var allSpecies = species
 
-/************* This will print all planet names onto the page -- probably delete later
-for (var i = 0; i < allPlanets.length; i++) {
+/* * * * * * * * * * GLOBAL VARIABLES * * * * * * * * * */
+var parsedURLArray = window.location.href.split("/");
+const CURRENT_PAGE = parsedURLArray[parsedURLArray.length - 1];
+
+/************* This will print all species names onto the page -- probably delete later
+for (var i = 0; i < allSpecies.length; i++) {
     // create a new element of type div as a variable
     var div = document.createElement('div');
 
     // assign the new div a class of 'planet' -> use CSS for styling later
-    div.className = 'planet';
+    div.className = 'species';
 
     // fill the div with a <p> element and fill the planet name
-    div.innerHTML = '<p>' + allPlanets[i].name + '</p>';
+    div.innerHTML = '<p>' + allSpecies[i].classification + '</p>';
 
     // add the whole div variable to the document body
     document.body.appendChild(div);
 
     // iterate and go to the next planet
-}*/
+} */
+
 
 
 // --------------------------------- searchByClimate() ---------------------------------//
@@ -101,8 +108,20 @@ function searchByDaylength() {
 
 // clear out all planets that are currently on the page
 function clearResults() {
+    // reference the current page so that this function can be used across pages
+    var currentPageClass;
+    switch(CURRENT_PAGE) {
+        case "species.html":
+            currentPageClass = "species"
+            break;
+        case "planets.html":
+            currentPageClass = "planet"
+            break;
+        default:
+            break;
+    }
     // find all planet elements on the page, set them as 'element' in an array, 'elements'
-    var elements = document.getElementsByClassName('planet'), element;
+    var elements = document.getElementsByClassName(currentPageClass), element;
     // loop through elements and delete each planet element
     while (element = elements[0]) {
         element.parentNode.removeChild(element);
