@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title>Zoe Calcote Portfolio - Species</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Displaying swapi species!" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div id="page-title">
+        <h1>Fill in the parameters of your favorite types of Species</h1>
+    </div>
+    <div id="search-classification">
+        <h2>Classification:</h2>
+        <select id="classification-picklist">
+            <option value="gastropod">Gastropod</option>
+            <option value="mammal">Mammal</option>
+            <option value="amphibian">Amphibian</option>
+            <option value="unknown">Unknown</option>
+            <option value="insectoid">Insectoid</option>
+            <option value="artificial">Artificial</option>
+        </select>
+        <button id="search-button-classification" type="button">Find a Match</button>
+    </div>
+    <div id="search-avgheight">
+        <h2>Average Height (in Centimeters):</h2>
+        <select id="avgheight-picklist">
+            <option value="short">0-100</option>
+            <option value="medium">101-200</option>
+            <option value="tall">201+</option>
+            <option value="unknown">Unknown</option>
+            <option value="na">N/A</option>
+        </select>
+        <button id="search-button-avgheight" type="button">Find a Match</button>
+    </div>
+    <table id="results-table" style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Classification</th>
+            <th>Average Height (cm)</th>
+        </tr>
+    </table>
+    <script src="../js/main.js" type="module"></script>
+</body>
+</html>
+
