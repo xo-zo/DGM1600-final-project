@@ -2,57 +2,72 @@
 
 <html lang="en">
 <head>
-  <title>Zoe Calcote Portfolio - Planets</title>
-  <meta charset="utf-8">
-  <meta name="description" content="Displaying swapi planets!" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoe Calcote Portfolio - Planets</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Displaying swapi planets!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="page-title">
-        <h1>Fill in the parameters of your dream destination</h1>
+    <section id="navbar">
+        <div id="navbar-content">
+            <div id="page-title">
+                <h1>Fill in the parameters of your dream destination</h1>
+            </div>
+            <a href="index.html">Portfolio Home</a>
+            <a href="swapihome.html">Select A Different Category</a>
+        </div>
+    </section>
+    <div id="navbar-filler"></div>
+    <div id=main-page>
+        <div id="search-menu">
+            <div id="search-climate">                
+                <h2>Climate:</h2>
+                <select id="climate-picklist">
+                    <option value="artic">Arctic</option><!-- Data spelling error -->
+                    <option value="arid">Arid</option>
+                    <option value="artificial temperate ">Artificial Temperate</option><!-- Data spelling error -->
+                    <option value="frigid">Frigid</option>
+                    <option value="frozen">Frozen</option>
+                    <option value="hot">Hot</option>
+                    <option value="humid">Humid</option>
+                    <option value="murky">Murky</option>
+                    <option value="moist">Moist</option>
+                    <option value="polluted">Polluted</option>
+                    <option value="rocky">Rocky</option>
+                    <option value="subartic">Subarctic</option><!-- Data spelling error -->
+                    <option value="superheated">Superheated</option>
+                    <option value="tropical">Tropical</option>
+                    <option value="temperate">Temperate</option>
+                    <option value="unknown">Unknown</option>
+                    <option value="windy">Windy</option>
+                </select>
+                <button id="search-button-climate" type="button">Find a Match</button>
+            </div>
+            <div id="search-daylength">
+                <h2>Length of Day (in Earth Hours):</h2>
+                <select id="daylength-picklist">
+                    <option value="short">Short (<20 Earth Hours)</option>
+                    <option value="average">Average (20-28 Earth Hours)</option>
+                    <option value="long">Long (>28 Earth Hours)</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+                <button id="search-button-daylength" type="button">Find a Match</button>
+            </div>
+        </div>
+        <div id="results-list">
+            <table id="results-table" style="width:100%">
+                <tr>
+                    <th><h2>Name</h2></th>
+                    <th><h2>Climate</h2></th>
+                    <th><h2>Length of Day (Earth Hours)</h2></th>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div id="search-climate">
-        <h2>Climate:</h2>
-        <select id="climate-picklist">
-            <option value="artic">Arctic</option><!-- Data spelling error -->
-            <option value="arid">Arid</option>
-            <option value="artificial temperate ">Artificial Temperate</option><!-- Data spelling error -->
-            <option value="frigid">Frigid</option>
-            <option value="frozen">Frozen</option>
-            <option value="hot">Hot</option>
-            <option value="humid">Humid</option>
-            <option value="murky">Murky</option>
-            <option value="moist">Moist</option>
-            <option value="polluted">Polluted</option>
-            <option value="rocky">Rocky</option>
-            <option value="subartic">Subarctic</option><!-- Data spelling error -->
-            <option value="superheated">Superheated</option>
-            <option value="tropical">Tropical</option>
-            <option value="temperate">Temperate</option>
-            <option value="unknown">Unknown</option>
-            <option value="windy">Windy</option>
-        </select>
-        <button id="search-button-climate" type="button">Find a Match</button>
-    </div>
-    <div id="search-daylength">
-        <h2>Length of Day (in Earth Hours):</h2>
-        <select id="daylength-picklist">
-            <option value="short">Short (<20 Earth Hours)</option>
-            <option value="average">Average (20-28 Earth Hours)</option>
-            <option value="long">Long (>28 Earth Hours)</option>
-            <option value="unknown">Unknown</option>
-        </select>
-        <button id="search-button-daylength" type="button">Find a Match</button>
-    </div>
-    <table id="results-table" style="width:100%">
-        <tr>
-            <th>Name</th>
-            <th>Climate</th>
-            <th>Length of Day (Earth Hours)</th>
-        </tr>
-    </table>
     <script src="../js/main.js" type="module"></script>
 </body>
 </html>
-
