@@ -19,16 +19,16 @@ body {
     font-size: 16px;
   }
   
-  /* Layout #2 start */
   #welcome-section {
     height: 100vh;
     overflow: auto;
-  /* Layout #2 end */
-  
     margin: auto;
-    width: 50%;
-    margin-top: 40%;
-    text-align: center;
+    width: 60%;
+
+    /* Aligning personal picture and about me to be side-by-side */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   
   
@@ -48,12 +48,14 @@ body {
   }
 
   #navbar-filler {
-    margin-top: 150px;
+    height: 320px;
   }
   
-  #projects {
+  #projects-section {
     text-align: center;
-    padding: 300px
+    margin: auto;
+    margin-bottom: 300px;
+    width: 60%;
   }
   
   /*BUTTON CSS*/
@@ -74,6 +76,10 @@ body {
   .button-hover:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
+
+  #swapi-link {
+    background-color: #F7B9B2;
+  }
   
   @media only screen and (max-width: 1000px)
   {
@@ -82,17 +88,18 @@ body {
     }
   }
 
-
   /* Styling of the swapi search page */
   #main-page {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
   }
 
   #main-page-sub {
-    margin-top: 10%;
     text-align: center;
+    margin-bottom: 280px;
+    width: 60%;
   }
 
   #results-list {
@@ -120,3 +127,17 @@ body {
     background-color: #A1C4C5;
   }
   /* end of w3schools css */
+
+  /*main page styling*/
+  #me-picture {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #profile-picture-div {
+    max-width: 30%;
+  }
+  #about-me-div {
+    max-width: 60%;
+  }
+  /*end main page styling*/
