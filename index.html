@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="description" content="Zoe Calcote's personal web dev/design portfolio" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="../css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
@@ -19,23 +19,29 @@
             <h1>Zoe Calcote</h1>
             <a href="#go-welcome">Welcome</a>
             <a href="#go-projects">Projects</a>
-            <a href="swapihome.html">Star Wars API</a>
         </div>
     </section>
     <!-- filler section to simply consume the same percent of the page as navbar -->
-    <section id="navbar-filler-section"></section>
+    <section id="navbar-filler">
+        <a name="go-welcome"></a>
+    </section>
    
     <section id="welcome-section">
-        <a name="go-welcome"></a>
-        <h1>Hi! Welcome to my Portfolio.</h1>
-        <p>I'm a student at Utah Valley University, and I'm planning to graduate with a B.S. in Psychology by the end of 2021.</p>
+        <div id="profile-picture-div">
+            <img src="images/me.jpg" id="me-picture"/>
+        </div>
+        <div id="about-me-div">
+            <h1>Hi! Welcome to my Portfolio.</h1>
+            <p>I'm a student at Utah Valley University, and I'm planning to graduate with a B.S. in Psychology by the end of 2021.</p>    
+        </div>
     </section>
 
-    <section id="projects" name="go-projects">
+    <section id="projects-section">
         <a name="go-projects"></a>
         <h1>Here's some things I've been working on lately:</h1>
         <a id="profile-link" class="button button-hover project-tile" href="https://github.com/xo-zo" target="_blank">My GitHub</a>
         <a class="button button-hover project-tile" href="https://zoeprina.wixsite.com/portfolio" target="_blank">My Wix Site</a>
+        <a id="swapi-link" class="button button-hover project-tile" href="swapihome.html">Star Wars API</a>
     </section>
 </body>
 </html>
