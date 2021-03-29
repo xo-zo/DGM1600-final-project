@@ -4,13 +4,13 @@ Final Project for my DGM 1600 course
 ## Commit History:
 
 #### First commit
-Set up the basic project structure, tied local and remote repos
+* Set up the basic project structure, tied local and remote repos
 
 #### 3/9
-Set up the basic .js file structure, tried to get basic data displayed without much success
+* Set up the basic .js file structure, tried to get basic data displayed without much success
 
 #### ???
-Additional commits were in here, but I forgot to log this
+* Additional commits were in here, but I forgot to log this
 
 #### 3/25
 * Now, you should remove the unit testing javascript file (if you haven't so so already)
